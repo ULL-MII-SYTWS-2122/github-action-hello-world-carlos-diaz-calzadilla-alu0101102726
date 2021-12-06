@@ -1,6 +1,5 @@
 const core = require("@actions/core");
 const fs = require("fs");
-const axios = require("axios");
 const shell = require("shelljs");
 
 let templateFiles = 'templates/'
@@ -10,7 +9,7 @@ let readme_path = core.getInput('readme_path') || 'README.md';
 
 async function copyReadmeTemplate(categoryReadme, path) {
      
-    templateFiles += `${category}.md`
+    templateFiles += `${categoryReadme}.md`
     await fs.copyFile(templateFiles, path, () => {
         console.log("Copied Successfully!");
     });
