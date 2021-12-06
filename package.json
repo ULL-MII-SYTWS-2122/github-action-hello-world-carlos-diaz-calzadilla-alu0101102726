@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/ULL-MII-SYTWS-2122/github-action-hello-world-carlos-diaz-calzadilla-alu0101102726/issues"
   },
-  "homepage": "https://github.com/ULL-MII-SYTWS-2122/github-action-hello-world-carlos-diaz-calzadilla-alu0101102726#readme"
+  "homepage": "https://github.com/ULL-MII-SYTWS-2122/github-action-hello-world-carlos-diaz-calzadilla-alu0101102726#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "axios": "^0.24.0"
+  }
 }
