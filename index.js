@@ -4,12 +4,12 @@ const shell = require("shelljs");
 
 let templateFiles = 'templates/'
 
-const category = core.getInput('category') || 'modulo';
+const template = core.getInput('template') || 'modulo';
 let readme_path = core.getInput('readme_path') || 'README.md';
 
-async function copyReadmeTemplate(categoryReadme, path) {
+async function copyReadmeTemplate(templateReadme, path) {
      
-    templateFiles += `${categoryReadme}.md`
+    templateFiles += `${templateReadme}.md`
     await fs.copyFile(templateFiles, path, () => {
         console.log("Copied Successfully!");
     });
@@ -25,4 +25,4 @@ else {
     readme_path = 'README.md';
 }
 
-copyReadmeTemplate(category, readme_path)
+copyReadmeTemplate(template, readme_path)
