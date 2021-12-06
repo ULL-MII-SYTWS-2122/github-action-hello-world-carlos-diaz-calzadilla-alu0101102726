@@ -22,7 +22,7 @@ jobs:
     - name: Run template action create
       uses: ./ # Uses an action in the root directory
       with:
-         category: '${{ github.event.inputs.template }}'
+         template: '${{ github.event.inputs.template }}'
     - name: Commit and push update
       run: |-
         git config --global user.email "trc@action.com"
