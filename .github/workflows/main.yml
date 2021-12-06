@@ -1,4 +1,4 @@
-name: Update README with QOTD
+name: Update README with tempaltes
 on:
   workflow_dispatch: # triggers manually
     inputs:
