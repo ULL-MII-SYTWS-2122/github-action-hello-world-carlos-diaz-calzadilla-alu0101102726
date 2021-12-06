@@ -17,7 +17,11 @@ async function copyReadmeTemplate(categoryReadme, path) {
             });
         break;
         case 'practica': 
-    
+            templateFiles += `${category}.md`
+            await fs.copyFile(templateFiles, path, () => {
+                console.log("Copied Successfully!");
+            });
+        
         break;
         case 'proyecto': 
             templateFiles += `${category}.md`
