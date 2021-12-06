@@ -9,27 +9,11 @@ const category = core.getInput('category') || 'modulo';
 let readme_path = core.getInput('readme_path') || 'README.md';
 
 async function copyReadmeTemplate(categoryReadme, path) {
-    switch(categoryReadme) {
-        case 'modulo': 
-            templateFiles += `${category}.md`
-            await fs.copyFile(templateFiles, path, () => {
-                console.log("Copied Successfully!");
-            });
-        break;
-        case 'practica': 
-            templateFiles += `${category}.md`
-            await fs.copyFile(templateFiles, path, () => {
-                console.log("Copied Successfully!");
-            });
-        
-        break;
-        case 'proyecto': 
-            templateFiles += `${category}.md`
-            await fs.copyFile(templateFiles, path, () => {
-                console.log("Copied Successfully!");
-            });
-        break;
-    }
+     
+    templateFiles += `${category}.md`
+    await fs.copyFile(templateFiles, path, () => {
+        console.log("Copied Successfully!");
+    });
 
 }
 
