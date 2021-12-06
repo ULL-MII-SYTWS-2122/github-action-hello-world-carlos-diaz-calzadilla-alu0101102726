@@ -10,7 +10,8 @@ let readme_path = core.getInput('readme_path') || 'README.md';
 async function copyReadmeTemplate(templateReadme, path) {
      
     templateFiles += `${templateReadme}.md`
-    await fs.copyFile(templateFiles, path, () => {
+    await fs.copyFile(templateFiles, path, (err) => {
+        if (err) throw err;
         console.log("Copied Successfully!");
     });
 
